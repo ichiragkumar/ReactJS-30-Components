@@ -4,6 +4,7 @@ export const AmericanExpressCard = () => {
   const [name, setName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
+  const [location, setLocation] = useState('');
 
 
   const validateCardNumber = (number) => /^[0-9]{15}$/.test(number); 
@@ -58,6 +59,11 @@ export const AmericanExpressCard = () => {
             }`}
           />
         </div>
+
+        <div>
+            <label htmlFor="card-type" className="block text-sm mb-2">Enter your location</label>
+            <input type="text" placeholder='Enter Your Location' value={location} onChange={(e) => setLocation(e.target.value)} className="w-full p-2 bg-gray-800 text-white rounded border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
+        </div>
       </div>
 
       <div className="w-1/2 border-l border-gray-700 pl-4">
@@ -79,6 +85,12 @@ export const AmericanExpressCard = () => {
           <h3 className="text-lg font-medium transition-transform ease-in-out duration-300">
             {expiryDate || 'MM/YY'}
           </h3>
+        </div>
+        <div>
+            <p>Location</p>
+            <h3 className="text-lg font-medium transition-transform ease-in-out duration-300">
+                {location}
+            </h3>
         </div>
       </div>
     </div>
