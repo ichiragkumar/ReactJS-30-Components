@@ -11,6 +11,7 @@ import { TopBar2 } from "./components/Topbar2";
 import { Screen1 } from "./components/Screen1";
 import {APICompApp} from "./components/APIComApp"
 import {CountDownerApp} from "./components/CountDown"
+import {TodoApp} from "./components/TodoApp"
 function App() {
   return (
     <div>
@@ -26,6 +27,7 @@ function App() {
       <HomePage />
       <PortFolioApp />
       <CountDownerApp />
+      <TodoApp/>
 
     </div>
   );
