@@ -5,7 +5,7 @@ import { useState,useEffect } from "react"
 export const APICompApp = () => {
     const [todos,setTodos] = useState([])
     async function handleAPisResponse()  {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/todos")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/todos/")
         if(response){
             setTodos(response.data)
             return response.data
